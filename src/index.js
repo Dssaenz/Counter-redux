@@ -1,26 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Principal from './Counter/Principal';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Principal from './Counter/Principal'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import * as serviceWorker from './serviceWorker'
 
 const initialState = {
     count: 0
-  };
+  }
   
   function reducer(state = initialState, action) {
     switch(action.type) {
       case 'INCREMENT':
         return {
           count: state.count + 1
-        };
+        }
       case 'DECREMENT':
         return {
           count: state.count - 1
-        };
+        }
       default:
-        return state;
+        return state
     }
   }
 
@@ -30,7 +30,7 @@ const App = () => (
     <Provider store={store}>
       <Principal/>
     </Provider>
-  );
+  )
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
