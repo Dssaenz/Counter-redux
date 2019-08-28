@@ -16,17 +16,17 @@ class Principal extends React.Component {
     return (
         <Container>
           <Button onClick={this.decrement}>-</Button>
-          <Text>{this.props.count}</Text>
+          <Text>{this.props.contador}</Text>
           <Button onClick={this.increment}>+</Button>
         </Container>
       )
     }
   }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   return {
-    count: state.count
-  };
+    contador: state.contador
+  }
 }
 
 export default connect(mapStateToProps)(Principal);
