@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Container, Button, Text } from './style'
 
 class Principal extends React.Component {
   
@@ -13,16 +14,14 @@ class Principal extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <button onClick={this.decrement}>-</button>
-          <span>{this.props.count}</span>
-          <button onClick={this.increment}>+</button>
-        </div>
-      </div>
-    )
+        <Container>
+          <Button onClick={this.decrement}>-</Button>
+          <Text>{this.props.count}</Text>
+          <Button onClick={this.increment}>+</Button>
+        </Container>
+      )
+    }
   }
-}
 
 function mapStateToProps(state) {
   return {
